@@ -45,8 +45,8 @@ const Tabs = () => {
                                 source={icons.maps}
                                 resizeMode="contain"
                                 style={{
-                                    width: 30,
-                                    height: 30,
+                                    width: 20,
+                                    height: 20,
                                     tintColor: focused ? COLORS.blue : COLORS.gray
                                 }}
                             />
@@ -64,8 +64,8 @@ const Tabs = () => {
                                 source={icons.bookmark}
                                 resizeMode="contain"
                                 style={{
-                                    width: 30,
-                                    height: 30,
+                                    width: 20,
+                                    height: 20,
                                     tintColor: focused ? COLORS.blue : COLORS.gray
                                 }}
                             />
@@ -83,8 +83,8 @@ const Tabs = () => {
                                 source={icons.calendar}
                                 resizeMode="contain"
                                 style={{
-                                    width: 30,
-                                    height: 30,
+                                    width: 20,
+                                    height: 20,
                                     tintColor: focused ? COLORS.blue : COLORS.gray
                                 }}
                             />
@@ -102,8 +102,8 @@ const Tabs = () => {
                                 source={icons.plane}
                                 resizeMode="contain"
                                 style={{
-                                    width: 30,
-                                    height: 30,
+                                    width: 20,
+                                    height: 20,
                                     tintColor: focused ? COLORS.blue : COLORS.gray
                                 }}
                             />
