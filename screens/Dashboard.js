@@ -14,6 +14,7 @@ const Dashboard = ({ navigation }) => {
 
     const [countries, setCountries] = useState([{id: -1}, ...dummyData.countries, {id: -2}])
     const [places, setPlaces] = useState([{id: -1}, ...dummyData.countries[0].places, {id: -2}])
+    const [placesScrollPosition, setPlacesScrollPosition] = useState(0);
     // Function for render Header //
     function renderHeader() {
         return (
@@ -188,6 +189,14 @@ const Dashboard = ({ navigation }) => {
         )
     }
 
+    // Explore Button Function 
+    function exploreButtonHandler() {
+        // Get the places current index
+        const currentIndex = parseInt(placesScrollPosition, 10) + 1
+        console.log(places[currentIndex])
+        // Navigate to next screen
+        navigation.navigate('Place', {selectedPlace: places[currentIndex]})
+    }
     // Function for Places
     function renderPlaces() {
         return (
@@ -202,12 +211,19 @@ const Dashboard = ({ navigation }) => {
                 }}
                 snapToAlignment='center'
                 snapToInterval={Platform.OS === 'ios' ? PLACES_ITEM_SIZE + 28 : PLACES_ITEM_SIZE}
-                scrollEventThrottle={16}
+                scrollEventThrottle={16} 
                 decelerationRate={0}
                 bounces={false}
                 onScroll={Animated.event([
                     { nativeEvent: { contentOffset: { x: placesScrollX }}}
                 ], { useNativeDriver: false })}
+                onMomentumScrollEnd={(event) => {
+                    // calculate position
+                    var position = (event.nativeEvent.contentOffset.x / PLACES_ITEM_SIZE).toFixed(0)
+                    
+                    // set place scroll position
+                    setPlacesScrollPosition(position)
+                }}
                 renderItem={({item, index}) => {
 
                     const opacity = placesScrollX.interpolate({
@@ -219,6 +235,8 @@ const Dashboard = ({ navigation }) => {
                         outputRange : [0.3, 1, 0.3],
                         extrapolate: 'clamp'
                     })
+                    
+                    let activeHeight = 0
 
                     if (Platform.OS === 'ios') {
                         if (SIZES.height > 800) {
@@ -305,6 +323,7 @@ const Dashboard = ({ navigation }) => {
                                             bottom: -20,
                                             width: 150
                                         }}
+                                        onPress={() => exploreButtonHandler()}
                                     />
                                 </View>
                             </Animated.View>

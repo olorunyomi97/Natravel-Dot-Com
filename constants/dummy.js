@@ -247,7 +247,7 @@ export const countries = [
         ]
     },
     {
-        id: 3,
+    id: 3,
         name: "Indonesia",
         image: require("../assets/images/indonesia/indonesia_map.png"),
         places: [
@@ -353,6 +353,114 @@ export const countries = [
             }
         ]
     },
+    // Biggies Data
+    // {
+    //     id: 4,
+    //         name: "Maldives",
+    //         image: require("../assets/images/indonesia/indonesia_map.png"),
+    //         places: [
+    //             {
+    //                 id: 1,
+    //                 name: "Bali",
+    //                 description: "Bali has it all. Scenic mountains, sacred temples, rich culture, sandy beaches, surf-worthy waves, lively nightlife, exciting shopping… and the list goes on.",
+    //                 image: require("../assets/images/maldives/maldihaven.jpeg"),
+    //                 rate: "4.89",
+    //                 mapInitialRegion: {
+    //                     latitude: -8.422605,
+    //                     longitude: 115.274697,
+    //                     latitudeDelta: 0.0053,
+    //                     longitudeDelta: 0.0044
+    //                 },
+    //                 hotels: [
+    //                     {
+    //                         id: "1",
+    //                         name: "The Kayon Jungle Resort",
+    //                         image: require("../assets/images/indonesia/bali/the_kayon_jungle_resort.jpg"),
+    //                         rate: 5,
+    //                         price: 199,
+    //                         latlng: {
+    //                             latitude: -8.422426,
+    //                             longitude: 115.275185,
+    //                         },
+    //                     },
+    //                     {
+    //                         id: "2",
+    //                         name: "Green View Private Villas",
+    //                         image: require("../assets/images/indonesia/bali/green_view_private_villas.webp"),
+    //                         rate: 5,
+    //                         price: 199,
+    //                         latlng: {
+    //                             latitude: -8.422203,
+    //                             longitude: 115.275142,
+    //                         },
+    //                     },
+    //                 ]
+    //             },
+    //             {
+    //                 id: 2,
+    //                 name: "Jakarta",
+    //                 description: "Jakarta may seem like a daunting megacity, but it also has a couple of interesting places that are worth a stopover.",
+    //                 image: require("../assets/images/maldives/maldiresort.jpeg"),
+    //                 rate: "4.89",
+    //                 mapInitialRegion: {
+    //                     latitude: -6.227687,
+    //                     longitude: 106.826979,
+    //                     latitudeDelta: 0.0053,
+    //                     longitudeDelta: 0.0044
+    //                 },
+    //                 hotels: [
+    //                     {
+    //                         id: "1",
+    //                         name: "Oakwood Premier Cozmo",
+    //                         image: require("../assets/images/indonesia/jakarta/oakwood_premier_cozmo.jpg"),
+    //                         rate: 5,
+    //                         price: 199,
+    //                         latlng: {
+    //                             latitude: -6.227846,
+    //                             longitude: 106.825391,
+    //                         },
+    //                     },
+    //                     {
+    //                         id: "2",
+    //                         name: "JW Marriott Hotel",
+    //                         image: require("../assets/images/indonesia/jakarta/jw_marriott_hotel.jpg"),
+    //                         rate: 5,
+    //                         price: 199,
+    //                         latlng: {
+    //                             latitude: -6.227036,
+    //                             longitude: 106.827333,
+    //                         },
+    //                     },
+    //                 ]
+    //             },
+    //             {
+    //                 id: 3,
+    //                 name: "Nusa Penida",
+    //                 description: "If you are in Bali and you want to go off-beat, go to Nusa Penida. Nusa Penida is the biggest of the three Nusa Islands just off from mainland Bali.",
+    //                 image: require("../assets/images/maldives/oceanhaven.jpeg"),
+    //                 rate: "4.89",
+    //                 mapInitialRegion: {
+    //                     latitude: -8.703571,
+    //                     longitude: 115.439826,
+    //                     latitudeDelta: 0.0053,
+    //                     longitudeDelta: 0.0044
+    //                 },
+    //                 hotels: [
+    //                     {
+    //                         id: "1",
+    //                         name: "Purist Beach",
+    //                         image: require("../assets/images/indonesia/nusa_penida/purist_beach.jpg"),
+    //                         rate: 5,
+    //                         price: 199,
+    //                         latlng: {
+    //                             latitude: -8.703571,
+    //                             longitude: 115.439826,
+    //                         },
+    //                     },
+    //                 ]
+    //             }
+    //         ]
+    //     },
 ]
 
 const dummyData = { countries };
