@@ -3,7 +3,7 @@ import { View, Text, Image, ImageBackground, Animated } from 'react-native';
 import { COLORS, SIZES, FONTS, icons } from "../constants"
 import { HeaderBar } from '../component';
 import { TextIconButton } from '../component';
-import SlidingUpPanel from 'rn-sliding-up-panel;'
+import SlidingUpPanel from 'rn-sliding-up-panel';
 
 const Place = ({navigation, route}) => {
 
