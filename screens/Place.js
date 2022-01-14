@@ -3,10 +3,12 @@ import { View, Text, Image, ImageBackground, Animated } from 'react-native';
 import { COLORS, SIZES, FONTS, icons } from "../constants"
 import { HeaderBar } from '../component';
 import { TextIconButton } from '../component';
+import SlidingUpPanel from 'rn-sliding-up-panel;'
 
 const Place = ({navigation, route}) => {
 
-        const [selectedPlace, setSelectedPlace] = React.useState(null);
+    const [selectedPlace, setSelectedPlace] = React.useState(null);
+    let _panel = React.useRef(null);
     React.useEffect(() => {
         let {selectedPlace} = route.params;
         setSelectedPlace(selectedPlace)
@@ -80,9 +82,35 @@ const Place = ({navigation, route}) => {
             </ImageBackground>
         )
     }
+
+    // Function for Sliding Up Map
+    function renderMap() {
+        return(
+            <SlidingUpPanel
+                ref={c => (_panel = c)}
+                draggableRange={{ top: SIZES.height + 120, bottom: 120 }}
+                showBackdrop={false}
+                snappingPoints={[SIZES.height + 120]}
+                height={SIZES.height + 120}
+                friction={0.7}
+            >
+                <View 
+                    style={{
+                        flex:1,
+                        backgroundColor: 'transaparent'
+                    }}
+                >
+                    {/* Panel Header */}
+
+                    {/* Panel Details */}
+                </View>
+            </SlidingUpPanel>
+        )
+    }
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             {renderPlace()}
+            {renderMap()}
         </View>
     )
 }
