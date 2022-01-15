@@ -4,6 +4,8 @@ import { COLORS, SIZES, FONTS, icons } from "../constants"
 import { HeaderBar } from '../component';
 import { TextIconButton } from '../component';
 import SlidingUpPanel from 'rn-sliding-up-panel';
+import MapView, {PROVIDER_GOOGLE, Marker} from "react-native-maps";
+import { MapStyle } from "../styles"
 
 const Place = ({navigation, route}) => {
 
@@ -101,8 +103,47 @@ const Place = ({navigation, route}) => {
                     }}
                 >
                     {/* Panel Header */}
+                    <View
+                        style={{
+                            height: 120,
+                            backgroundColor: "transaparent",
+                            alignItems: 'center',
+                            justifyContent:'center'
+                        }}
+                    >
 
+                        <Image 
+                            source={icons.up_arrow}
+                            style={{
+                                width: 20,
+                                height: 20,
+                                tintColor: COLORS.white
+                            }}
+                        />
+                        <Text style={{color: COLORS.white, ...FONTS.h4 }}> SWIPE UP FOR DETAILS</Text>
+                    </View>
                     {/* Panel Details */}
+                    <View
+                        style={{
+                            flex: 1,
+                            backgroundColor: COLORS.white,
+                            alignItems: 'center',
+                            justifyContent:'center'
+                        }}
+                    >
+
+                        <MapView
+                            style={{
+                                width:"100%",
+                                height:"100%",
+                            }}
+                            provider={PROVIDER_GOOGLE}
+                            initialRegion={selectedPlace?.mapInitialRegion}
+                        >
+
+                        </MapView>
+                    </View>
+
                 </View>
             </SlidingUpPanel>
         )
